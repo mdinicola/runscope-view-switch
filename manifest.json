@@ -1,0 +1,17 @@
+{
+    "name": "Runscope View Switcher",
+    "version": "1.0",
+    "description": "Change runscope to desired view style on load",
+    "content_scripts": [
+      {
+        "matches": ["https://www.runscope.com/radar/*"],
+        "exclude_matches": ["https://www.runscope.com/radar/*/*"],
+        "run_at": "document_idle",
+        "js": ["jquery-3.3.1.slim.min.js", "contentScript.js"]
+      }
+    ],
+    "permissions": [
+      "activeTab"
+    ],
+    "manifest_version": 2
+  }
